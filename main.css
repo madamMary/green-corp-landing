@@ -9,10 +9,18 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  position: sticky;
-  background-color: white;
   top: 0;
   z-index: 1;
+  position: fixed;
+  background: none;
+  left: 0;
+  right: 0;
+  transition: box-shadow, background-color .25s ease;
+}
+
+.header__scrolled {
+  background-color: white;
+  box-shadow: 0 12px 34px -11px rgb(65 62 101 / 10%);
 }
 
 .header__logo {
@@ -55,7 +63,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-top: 115px;
+  padding-top: 200px;
   padding-bottom: 115px;
   position: relative;
 }
@@ -260,16 +268,14 @@ button:hover {
 }
 
 .features__border {
+  width: 100%;
+  border: 1px solid #E6EAF4;
   margin-top: 50px;
   margin-bottom: 50px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #E6EAF4;
 }
 
 .features__feedback {
   display: flex;
-  flex-direction: row;
 }
 
 .features__feedback-left {
@@ -282,40 +288,40 @@ button:hover {
 
 .features__feedback-left p {
   font-size: 18px;
-  line-height: 26px;
   opacity: 0.7;
+  line-height: 26px;
 }
 
 .features__feedback-right {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  align-items: center;
 }
 
 .features__box {
-  padding-top: 30px;
-  padding-right: 40px;
-  padding-bottom: 25px;
-  padding-left: 40px;
-  color: white;
   border-radius: 25px;
+  padding: 30px 40px 25px 40px;
+  color: white;
 }
 
 .features__box h3 {
-  margin-top: 0px;
-  margin-bottom: 20px;
   font-size: 48px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .features__savings-box {
-  margin-right: 30px;
   background-color: #dc5e26;
-  box-shadow: 0px 6px 0 rgb(221 95 38 / 20%);
+  box-shadow: 0 6px 0 rgb(221 95 38 / 20%);
+  margin-right: 30px;
 }
 
 .features__rate-box {
   background-color: #1D263A;
-  box-shadow: 0px 6px 0 rgb(29 38 58 / 20%);
+  box-shadow: 0 6px 0 rgb(29 38 58 / 20%);
+}
+
+.stars {
+  color: #ff7039;
 }
 
 .promo {
